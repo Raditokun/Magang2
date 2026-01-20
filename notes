@@ -1,0 +1,21 @@
+byte : byte is a data type that represents a single unsigned 8-bit integer 
+(0-255)
+
+jwt.NewWithClaims: a func to create a new JWT token
+jwt.NewWithClaims(jwt.SigningMEthodHS256):algorithm used to sign the token (encrypts)
+
+
+func ValidateToken(tokenString string)(*models.JWTClaims, error):
+
+a func that validates a JWT token and returns the claim
+(tokenString string): turn JWT token into a string
+*models.JWTClaims: a pointer to claims data(*models.JWTClaims)
+
+func HashPassword:Hashes Password using bcrypt
+
+bytes, err := bcrypt.GenerateFromPassword([]byte(password),bcrypt.DefaultCost)
+:Converts passowrd to a hashed password
+bcrypt.DefaultCost: Security level
+
+
+bcrypt.CompareHashAndPassword:
